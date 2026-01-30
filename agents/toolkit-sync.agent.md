@@ -49,6 +49,18 @@ This is a **Specialized Synchronization Agent** dedicated to maintaining consist
    - Checks for missing references
    - Validates formatting standards
 
+5. **Logs Management** 📁
+   - Organizes improvement reports in logs/ folder
+   - Separates documentation from logs
+   - Maintains logs/README.md index
+   - Ensures logs are tracked in git
+
+6. **Git Integration** 🔀
+   - Commits synchronized changes
+   - Creates meaningful commit messages
+   - Pushes updates to repository
+   - Maintains change history
+
 ## 🎬 When to Invoke
 
 ### Automatic Triggers
@@ -79,6 +91,12 @@ This is a **Specialized Synchronization Agent** dedicated to maintaining consist
 - Sync resource links
 - Update related documents section
 - Refresh quick start examples
+
+✅ **Improvement Reports Created**
+- Move reports to logs/ folder
+- Update logs/README.md index
+- Update references in main docs
+- Commit and push to git
 
 ### Manual Invocation
 
@@ -157,16 +175,27 @@ Details: [what was changed]
    ├─ Update references
    └─ Maintain formatting
 
-4. ✅ Validation Phase
+4. 📁 Organize Logs
+   ├─ Move reports to logs/ folder
+   ├─ Update logs/README.md index
+   ├─ Update documentation links
+   └─ Ensure logs tracked in git
+
+5. ✅ Validation Phase
    ├─ Verify all changes applied
    ├─ Check consistency
    ├─ Validate formatting
    ├─ Test links and references
    └─ Confirm accuracy
 
-5. 📝 Commit & Report
+6. 🔀 Git Integration
+   ├─ Stage all changes (git add .)
+   ├─ Commit with meaningful message
+   ├─ Push to remote repository
+   └─ Verify successful push
+
+7. 📝 Commit & Report
    ├─ Create changelog entry
-   ├─ Commit synchronized changes
    ├─ Generate sync report
    └─ Document what was updated
 ```

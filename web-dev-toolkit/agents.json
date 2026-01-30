@@ -1,7 +1,23 @@
 {
-    "version": "1.0.0",
+    "version": "1.1.0",
     "name": "Web Development Toolkit",
-    "description": "Automated multi-agent web development system for intelligent project orchestration",
+    "description": "Automated multi-agent web development system for intelligent project orchestration with enforced workflow compliance",
+    "changelog": {
+        "1.1.0": {
+            "date": "2026-01-30",
+            "changes": [
+                "Added CRITICAL OPERATING RULES to web-creator.agent.md",
+                "Added mandatory workflow enforcement in brain_orchestrator.md",
+                "Created WORKFLOW_ENFORCEMENT.md comprehensive guide",
+                "Created TEST_CASES.md for validation",
+                "Created BEHAVIOR_COMPARISON.md visual comparison",
+                "Created QUICK_REFERENCE.md quick reference card",
+                "Fixed issue: Agent no longer bypasses workflow steps",
+                "Fixed issue: Agent no longer acts like general assistant"
+            ],
+            "impact": "Major improvement in workflow compliance and quality assurance"
+        }
+    },
     "agents": [
         {
             "id": "brain-orchestrator",

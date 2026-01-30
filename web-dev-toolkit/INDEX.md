@@ -33,6 +33,25 @@
 | [USAGE.md](USAGE.md)                         | 完整的使用指南和示例 | 700+ |
 | [CONVERSION_REPORT.md](CONVERSION_REPORT.md) | 轉換完成報告         | 500+ |
 
+### 🆕 改進與測試文檔 (v1.1.0)
+
+| 文檔                                                 | 用途                       | 字數  |
+| ---------------------------------------------------- | -------------------------- | ----- |
+| [WORKFLOW_ENFORCEMENT.md](WORKFLOW_ENFORCEMENT.md)   | 工作流程強制執行完整指南   | 1500+ |
+| [TEST_CASES.md](TEST_CASES.md)                       | 測試案例與驗證檢查清單     | 800+  |
+| [BEHAVIOR_COMPARISON.md](BEHAVIOR_COMPARISON.md)     | 改進前後行為對比           | 1200+ |
+| [QUICK_REFERENCE.md](QUICK_REFERENCE.md)             | 快速參考卡                 | 1000+ |
+
+### 📊 改進報告與日誌
+
+| 文檔                                                       | 用途                       | 字數  |
+| ---------------------------------------------------------- | -------------------------- | ----- |
+| [logs/IMPROVEMENT_v1.1.0.md](logs/IMPROVEMENT_v1.1.0.md)   | v1.1.0 改進摘要            | 1000+ |
+| [logs/COMPLETION_REPORT_v1.1.0.md](logs/COMPLETION_REPORT_v1.1.0.md) | 完整改進報告 | 2000+ |
+| [logs/FILES_CHECKLIST_v1.1.0.md](logs/FILES_CHECKLIST_v1.1.0.md) | 檔案清單 | 1500+ |
+| [logs/CONVERSION_REPORT.md](logs/CONVERSION_REPORT.md)     | 轉換報告                   | 500+  |
+| [logs/DELIVERY_SUMMARY.md](logs/DELIVERY_SUMMARY.md)       | 交付摘要                   | 400+  |
+
 ### 配置文件
 
 | 文件                       | 說明                                       |

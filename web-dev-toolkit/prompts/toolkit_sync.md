@@ -30,6 +30,18 @@
 - 生成同步報告
 - 提交變更
 
+### 5. 日誌管理
+- 整理改進報告到 logs/ 資料夾
+- 分離說明文件與日誌
+- 維護 logs/README.md 索引
+- 確保日誌被 git 追蹤
+
+### 6. Git 整合
+- 提交同步變更
+- 撰寫清晰的 commit 訊息
+- 推送更新到遠端
+- 維護變更歷史
+
 ## 同步映射
 
 ### 必須同步的內容
@@ -50,9 +62,19 @@
    ↓
 3. 執行更新
    ↓
-4. 驗證一致性
+4. 整理日誌
+   ├─ 移動報告到 logs/
+   ├─ 更新 logs/README.md
+   └─ 更新文檔連結
    ↓
-5. 提交並報告
+5. 驗證一致性
+   ↓
+6. Git 提交
+   ├─ git add .
+   ├─ git commit -m "[message]"
+   └─ git push
+   ↓
+7. 生成報告
 ```
 
 ## 核心規則
@@ -82,6 +104,20 @@
 - 維持 emoji 使用
 - 保持 ASCII 圖表正確
 
+### 規則 #5: 日誌分離
+**確保** 報告與文檔分開：
+- 所有 *_REPORT.md、*_v*.md 檔案移至 logs/
+- CONVERSION_REPORT.md、DELIVERY_SUMMARY.md 移至 logs/
+- 更新所有文檔中的連結指向 logs/
+- 維護 logs/README.md 索引最新
+
+### 規則 #6: Git 追蹤
+**務必** 提交所有變更：
+- 同步完成後立即 commit
+- 使用清晰的 commit 訊息格式
+- 推送到遠端儲存庫
+- logs/ 資料夾不在 .gitignore 中
+
 ## 同步檢查清單
 
 完成前確認以下項目：
@@ -96,6 +132,26 @@
 - [ ] 格式一致
 - [ ] 沒有破損的參考
 - [ ] 版本號相同
+- [ ] 報告已移至 logs/ 資料夾
+- [ ] logs/README.md 已更新
+- [ ] 文檔連結已更新為 logs/ 路徑
+- [ ] 已 git add . 所有變更
+- [ ] 已 git commit 提交變更
+- [ ] 已 git push 推送到遠端
+
+## Git 提交訊息範本
+
+```
+sync: [簡短描述]
+
+- Updated web-creator.agent.md with [變更內容]
+- Organized reports in logs/ folder
+- Updated documentation links
+- [其他變更]
+
+Version: [版本號]
+Date: [日期]
+```
 
 ## 輸出物
 
@@ -122,6 +178,19 @@
 - ✅ web-creator.agent.md
   - 部分 1: [更新內容]
 
+## 日誌整理
+
+- ✅ 報告已移至 logs/
+  - [列出移動的檔案]
+- ✅ logs/README.md 已更新
+- ✅ 文檔連結已更新
+
+## Git 提交
+
+- ✅ git add . (所有變更已暫存)
+- ✅ git commit -m "[訊息]"
+- ✅ git push (已推送至遠端)
+
 ## 驗證狀態
 
 - ✅ 所有 agents 已同步
@@ -129,6 +198,8 @@
 - ✅ 配置一致
 - ✅ 參考有效
 - ✅ 格式正確
+- ✅ 日誌已整理
+- ✅ 變更已提交
 
 ---
 **狀態**: ✅ 同步完成

@@ -2,6 +2,24 @@
 
 這是一個完整的 GitHub Copilot 自定義 agent 套件，將 agent-toolkit 轉換為 Copilot 兼容的格式。
 
+## 🆕 最新更新 (2026-01-30)
+
+**v1.1.0 - 工作流程強制執行改進**
+
+✨ **問題修復**: web-creator 不再會跳過規則步驟或變回一般 Agent 模式
+
+**改進內容**:
+- ✅ 在 web-creator.agent.md 添加 **CRITICAL OPERATING RULES**
+- ✅ 在 brain_orchestrator.md 添加**強制執行規則**
+- ✅ 新增 **MANDATORY WORKFLOW ENFORCEMENT** 檢查機制
+- ✅ 創建 **WORKFLOW_ENFORCEMENT.md** 完整指南
+
+**詳細說明**: 請參閱 [WORKFLOW_ENFORCEMENT.md](WORKFLOW_ENFORCEMENT.md)
+
+**改進報告**: 查看 [logs/IMPROVEMENT_v1.1.0.md](logs/IMPROVEMENT_v1.1.0.md)
+
+---
+
 ## 📋 文件結構
 
 ```
