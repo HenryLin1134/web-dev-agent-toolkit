@@ -1,0 +1,226 @@
+{
+    "version": "1.0.0",
+    "name": "Web Development Toolkit",
+    "description": "Automated multi-agent web development system for intelligent project orchestration",
+    "agents": [
+        {
+            "id": "brain-orchestrator",
+            "name": "Brain Orchestrator",
+            "emoji": "🧠",
+            "description": "Central coordinator and decision-maker for the entire development workflow",
+            "role": "Orchestrator",
+            "capabilities": [
+                "Workflow coordination",
+                "Progress monitoring",
+                "Decision making",
+                "Error recovery",
+                "Process management"
+            ],
+            "prompt_file": "prompts/brain_orchestrator.md",
+            "can_invoke": [
+                "planning-agent",
+                "implementation-agent",
+                "testing-agent",
+                "debug-agent",
+                "fix-agent",
+                "enhancement-agent",
+                "release-agent"
+            ]
+        },
+        {
+            "id": "planning-agent",
+            "name": "Planning Agent",
+            "emoji": "📋",
+            "description": "Project planning expert responsible for converting requirements into actionable plans",
+            "role": "Planner",
+            "capabilities": [
+                "Requirements analysis",
+                "Technical design",
+                "Resource planning",
+                "Architecture design",
+                "Task breakdown"
+            ],
+            "prompt_file": "prompts/planning_agent.md",
+            "outputs": [
+                "project_plan.md",
+                "technical_specification.md",
+                "file_structure.md",
+                "task_breakdown.md"
+            ]
+        },
+        {
+            "id": "implementation-agent",
+            "name": "Implementation Agent",
+            "emoji": "💻",
+            "description": "Senior software engineer responsible for code implementation and architecture realization",
+            "role": "Developer",
+            "capabilities": [
+                "Code generation",
+                "Architecture implementation",
+                "Module integration",
+                "Dependency management",
+                "Configuration setup"
+            ],
+            "prompt_file": "prompts/implementation_agent.md",
+            "outputs": [
+                "implementation_summary.md",
+                "Source code files"
+            ]
+        },
+        {
+            "id": "testing-agent",
+            "name": "Testing Agent",
+            "emoji": "🧪",
+            "description": "Quality assurance specialist responsible for comprehensive testing",
+            "role": "QA Engineer",
+            "capabilities": [
+                "Functional testing",
+                "Unit testing",
+                "Integration testing",
+                "Performance testing",
+                "Test report generation"
+            ],
+            "prompt_file": "prompts/testing_agent.md",
+            "outputs": [
+                "test_report.md",
+                "test_results.json"
+            ]
+        },
+        {
+            "id": "debug-agent",
+            "name": "Debug Agent",
+            "emoji": "🐛",
+            "description": "Diagnostic specialist for identifying and analyzing issues",
+            "role": "Debugger",
+            "capabilities": [
+                "Issue diagnosis",
+                "Root cause analysis",
+                "Error tracking",
+                "Problem reproduction",
+                "Debug report generation"
+            ],
+            "prompt_file": "prompts/debug_agent.md",
+            "outputs": [
+                "debug_report.md",
+                "issue_analysis.md"
+            ]
+        },
+        {
+            "id": "fix-agent",
+            "name": "Fix Agent",
+            "emoji": "🔧",
+            "description": "Problem-solving specialist responsible for fixing identified issues",
+            "role": "Troubleshooter",
+            "capabilities": [
+                "Bug fixing",
+                "Code refactoring",
+                "Issue resolution",
+                "Optimization",
+                "Solution implementation"
+            ],
+            "prompt_file": "prompts/fix_agent.md",
+            "outputs": [
+                "fix_summary.md",
+                "Modified source files"
+            ]
+        },
+        {
+            "id": "enhancement-agent",
+            "name": "Enhancement Agent",
+            "emoji": "✨",
+            "description": "Feature enhancement specialist for adding new capabilities and improvements",
+            "role": "Enhancer",
+            "capabilities": [
+                "Feature addition",
+                "Code optimization",
+                "Performance improvement",
+                "User experience enhancement",
+                "Documentation updates"
+            ],
+            "prompt_file": "prompts/enhancement_agent.md",
+            "outputs": [
+                "enhancement_summary.md",
+                "New feature files"
+            ]
+        },
+        {
+            "id": "release-agent",
+            "name": "Release Agent",
+            "emoji": "🚀",
+            "description": "Release manager responsible for final validation and deployment",
+            "role": "Release Manager",
+            "capabilities": [
+                "Final testing",
+                "Release validation",
+                "Deployment preparation",
+                "Documentation finalization",
+                "Version management"
+            ],
+            "prompt_file": "prompts/release_agent.md",
+            "outputs": [
+                "release_notes.md",
+                "deployment_checklist.md"
+            ]
+        }
+    ],
+    "workflows": [
+        {
+            "id": "standard-development",
+            "name": "Standard Development Workflow",
+            "description": "Complete development lifecycle from requirements to release",
+            "steps": [
+                "planning-agent",
+                "implementation-agent",
+                "testing-agent",
+                "enhancement-agent",
+                "release-agent"
+            ],
+            "error_handling": "debug-agent -> fix-agent -> retry"
+        },
+        {
+            "id": "bug-fix-workflow",
+            "name": "Bug Fix Workflow",
+            "description": "Workflow for identifying and fixing bugs",
+            "steps": [
+                "debug-agent",
+                "fix-agent",
+                "testing-agent",
+                "release-agent"
+            ]
+        },
+        {
+            "id": "enhancement-workflow",
+            "name": "Enhancement Workflow",
+            "description": "Workflow for adding features and improvements",
+            "steps": [
+                "planning-agent",
+                "enhancement-agent",
+                "testing-agent",
+                "release-agent"
+            ]
+        }
+    ],
+    "changelog_system": {
+        "enabled": true,
+        "format": "CHANGELOG_[timestamp]_[agent_id].md",
+        "include_fields": [
+            "timestamp",
+            "agent_name",
+            "status",
+            "actions_taken",
+            "files_modified",
+            "next_steps",
+            "issues_found"
+        ]
+    },
+    "configuration": {
+        "auto_recovery": true,
+        "max_retry_attempts": 3,
+        "changelog_directory": "projects/",
+        "log_level": "info",
+        "feedback_required_for": [
+            "critical_decisions",
+            "user_interaction_needed"
+        ]
+    }
+}
