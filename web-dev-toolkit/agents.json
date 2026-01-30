@@ -24,7 +24,8 @@
                 "debug-agent",
                 "fix-agent",
                 "enhancement-agent",
-                "release-agent"
+                "release-agent",
+                "toolkit-sync"
             ]
         },
         {
@@ -160,6 +161,37 @@
             "outputs": [
                 "release_notes.md",
                 "deployment_checklist.md"
+            ]
+        },
+        {
+            "id": "toolkit-sync",
+            "name": "Toolkit Sync Agent",
+            "emoji": "🔄",
+            "description": "Synchronization specialist responsible for keeping web-creator.agent.md in sync with toolkit updates",
+            "role": "Sync Specialist",
+            "capabilities": [
+                "Toolkit change monitoring",
+                "Configuration synchronization",
+                "Agent definition updates",
+                "Workflow diagram generation",
+                "Consistency validation",
+                "Automated sync execution",
+                "Change documentation",
+                "Bidirectional sync verification"
+            ],
+            "prompt_file": "prompts/toolkit_sync.md",
+            "outputs": [
+                "web-creator.agent.md (updated)",
+                "sync_report.md",
+                "change_log.md"
+            ],
+            "auto_trigger": true,
+            "trigger_events": [
+                "agents.json modified",
+                "workflow changed",
+                "new agent added",
+                "capability updated",
+                "configuration changed"
             ]
         }
     ],
