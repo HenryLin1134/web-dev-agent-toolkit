@@ -66,8 +66,8 @@ Copy the files to your project's `.github` directory:
 git clone https://github.com/HenryLin1134/web-dev-agent-toolkit.git
 
 # Copy to your project
-cp -r web-dev-agent-toolkit/.github/agents .github/
-cp -r web-dev-agent-toolkit/.github/web-dev-toolkit .github/
+cp -r web-dev-agent-toolkit/agents/. .github/agents/
+cp -r web-dev-agent-toolkit/web-dev-toolkit/. .github/web-dev-toolkit/
 ```
 
 ### 2. Configure GitHub Copilot
